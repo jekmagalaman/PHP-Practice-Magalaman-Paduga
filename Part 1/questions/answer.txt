@@ -1,0 +1,247 @@
+Question 1: what is the output of print_r($person);?
+<?php
+print_r('hello');
+print_r([1,2,3]);
+
+class person{
+    public $name;
+    public $age;
+}
+
+$person = new Person ();
+$person -> name = "Alice";
+$person -> age = 25;
+
+print_r($person);
+
+?>
+Answer:
+helloArray
+(
+    [0] => 1       
+    [1] => 2       
+    [2] => 3       
+)
+person Object      
+(
+    [name] => Alice
+    [age] => 25    
+)
+
+Question 2: What is the output of var_dump($person);?
+<?php
+var_dump('Hello');
+var_dump([1,2,3]);
+
+class person{
+    public $name;
+    public $age;
+}
+
+$person = new Person ();
+$person -> name = "Alice";
+$person -> age = 25;
+
+var_dump($person);
+
+?>
+Answer:
+string(5) "Hello"
+array(3) {       
+  [0]=>
+  int(1)
+  [1]=>
+  int(2)
+  [2]=>
+  int(3)
+}
+object(person)#1 (2) {
+  ["name"]=>
+  string(5) "Alice"
+  ["age"]=>
+  int(25)
+}
+
+Question 3: what is the output of var_dump($cashOnHand);?
+<?php
+$name = 'Brad';
+$age = 40;
+$hasKids = true;
+$cashOnHand = 10.5;
+
+var_dump($cashOnHand);
+
+?>
+Answers:
+float(10.5)
+
+Question 4: What character is used to concatenate strings?
+<?php
+$name = 'Brad';
+$age = 40;
+$hasKids = true;
+$cashOnHand = 10.5;
+
+echo "$name is $age years old";
+echo "{$name} is {$age} years old";
+echo  $name . 'is'. $age . 'years old';
+?>
+Answer:
+Brad is 40 years oldBrad is 40 years oldBradis40years old
+
+Question 5:what is the output of echo HOST;?
+<?php
+define('HOST', 'Localhost');
+define('USER', 'root');
+
+echo HOST;
+?>
+Answer:
+Localhost
+Question 6: How will you define in PHP the variable of PI with value of 3.1416?
+Answer:<?php 
+define('PI', 3.2426);
+
+?>
+Question 7: What is the output of echo$number[3]+$number[4];?
+<?php
+$numbers = [1, 2, 3, 4, 5];
+echo $numbers[3] + $numbers[4];
+?>
+Answer:
+9
+
+Question 8: What is the output of echo$colors[3];?
+<?php
+$colors = ["red", "green","blue"];
+$numbers = [1, 2, 3, 4, 5];
+
+echo $numbers[3] + $numbers[4];
+echo $colors[3];
+?>
+Answer:
+PHP Warning:  Undefined array key 3 in C:\Users\Client\Desktop\questions\question7-8.php on line 4
+
+Question 9: What are the keys in $person array?
+<?php
+$person = [
+    "first_name" => "John",
+    "last_name" => "Doe",
+    "age" => 30
+];
+echo $person["first_name"];
+
+?>
+Answer:
+first_name
+last_name
+age
+
+Question 10: In PHP, How will you change the green into white in $colors array?
+<?php
+$colors =[
+    1 => 'red',
+    2 => 'green',
+    3 => 'blue'
+];
+$colors[2] = 'white';
+echo $colors[2];
+
+?>
+Answers:
+white
+Question 11: What is the output of echo $hex['red'];?
+<?php
+$hex =[
+    'red' => '#f00',
+    'green' => '#0f0',
+    'blue' => '#00f',
+];
+echo $hex['red'];
+?>
+Answer:
+#f00
+ Question 12: What is the output of echo $matrix [1][2];?
+<?php
+$matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+echo $matrix [1][2];
+?>
+Answer:
+6
+Question 13: What is the output of echo $people[0]['first_name'];?
+<?php
+$person1 = [ 
+    'first_name' => 'Maeve', 
+    'last_name' => 'Reid', 
+    'email' => 'reid@gmail.com', 
+    ]; 
+    // Array of people 
+    $people = [ 
+    $person1, // [... $person1] 
+    [ 
+    'first_name' => 'John', 
+    'last_name' => 'Doe', 
+    'email' => 'john@gmail.com', 
+    ],
+    [ 
+    'first_name' => 'Jane', 
+    'last_name' => 'Doe', 
+    'email' => 'jane@gmail.com', 
+    ],
+    ];
+    echo $people[0]['first_name'];
+?>
+Answer:
+Maeve
+Question 14: What is the output of echo $people[2]['email'];? 
+<?php
+$person1 = [ 
+    'first_name' => 'Maeve', 
+    'last_name' => 'Reid', 
+    'email' => 'reid@gmail.com', 
+    ]; 
+    // Array of people 
+    $people = [ 
+    $person1, // [... $person1] 
+    [ 
+    'first_name' => 'John', 
+    'last_name' => 'Doe', 
+    'email' => 'john@gmail.com', 
+    ],
+    [ 
+    'first_name' => 'Jane', 
+    'last_name' => 'Doe', 
+    'email' => 'jane@gmail.com', 
+    ],
+    ];
+    echo $people[2]['email'];
+?>
+Answer: 
+jane@gmail.com
+Question 15:What is the output of var_dump($chunkedArray);? 
+<?php
+$fruits =['apple', 'banana', 'orange'];
+var_dump(array_chunk($fruits,2));
+
+?>
+Answer: 
+array(2) {
+  [0]=>
+  array(2) {
+    [0]=>
+    string(5) "apple"
+    [1]=>
+    string(6) "banana"
+  }
+  [1]=>
+  array(1) {
+    [0]=>
+    string(6) "orange"
+  }
+}
+
